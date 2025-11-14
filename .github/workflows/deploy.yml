@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: read
+  contents: write   # ← ESSENCIAL
   pages: write
   id-token: write
 
@@ -32,5 +32,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist
+          folder: dist   # verifique se sua pasta de build é "dist"
           clean: true
